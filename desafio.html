@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<! -- informações para o navegador -- >
+		<title>
+		ALLY your Education hub </title>
+		<meta charset="utf-8">
+
+		<link rel="stylesheet" type="text/css" href="style.css" media="screen" /> 
+
+	</head>
+
+	<body background="file:///C:/Users/Adriele/Downloads/Screenshot%202021-06-15%20at%2013-49-53%20Adobe%20Photoshop%20Express.png">
+
+		<header>
+			<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP34DoWyy8aXJtzurALrtBmL7SRw4BN-NYcPCQ3U9LJSa9BhBEzmeZrSbi2_rQfYyCy0ivDumPYK-WfA&usqp=CAU">
+		</header>
+
+
+		<nav id="menu">
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Agências</a></li>
+				<li><a href="#">Missão</a></li>
+				<li><a href="#">Experiência</a></li>
+				<li><a href="#">Contato</a></li>
+			</ul>
+		</nav>
+
+
+		<h1> <em>Cadastro de cursos</em></h1>
+
+
+		<form action="" method="post">
+			<div>
+				nome do usuario:
+				<input type="text" name="user"> <br>
+			</div>
+			<div>
+				Data de início:
+				<input type="date" name="date"><br>
+			</div>
+			<div>
+				Data do fim :
+				<input type="date" name="date" value="Data"> <br>
+			</div>
+			<div>
+				Duração:
+				<input type="text" name="duração">
+			</div>
+			<div>
+				<textarea name="message" rows="15" cols="40"></textarea> 
+				<br>
+				<br>
+				<input type="submit" value="cadastrar" >
+			</div>
+			<label for="busca">Buscar</label>
+			<input type="search" id="busca" name="q">
+			<button type="submit">OK</button>
+			<br><br>
+			<table style="width:100%">
+				<tr>
+					<th>Nome</th>
+					<th>Duração</th> 
+					<th>Data de início</th>
+					<th> Data do término</th>
+				</tr>
+				<tr>
+					<td>Curso de Espanhol</td>
+					<td> 8 semanas</td>
+					<td>12/07/2021</td>
+					<td>12/09/2021</td>
+				</tr>
+				<tr>
+					<td>Curso de Francês</td>
+					<td>10 semanas</td>
+					<td>12/07/2021</td>
+					<td>12/10/2021</td>
+					<tr>
+						<td>Curso de Inglês</td>
+						<td>12 semanas</td>
+						<td>12/07/2021</td>
+						<td>12/11/2021</td>
+					</tr>
+				</table>
+			</form>
+			<script> 
+			$(function(){
+	var operacao = "A"; //"A"=Adição; "E"=Edição
+	var indice_selecionado = -1; //Índice do item selecionado na lista
+	var tbClientes = localStorage.getItem("tbClientes");// Recupera os dados armazenados
+	tbClientes = JSON.parse(tbClientes); // Converte string para objeto
+	if(tbClientes == null) // Caso não haja conteúdo, iniciamos um vetor vazio
+	tbClientes = [];
+});
+function Adicionar(){
+	var cliente = JSON.stringify({
+		Nome     : $("#txtNome").val(),
+		duração : $("#txtDuração").val(),
+	});
+	tbClientes.push(cliente);
+	localStorage.setItem("tbClientes", JSON.stringify(tbclientes));
+	alert("Registro adicionado.");
+	return true;
+
+			</script>
+		</body>
+		</html>
