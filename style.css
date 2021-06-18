@@ -34,7 +34,7 @@ header {
     border-bottom:3px solid #EA0000;
 }
 form div {
-	background-color: #ccc;
+	background-color: rgb(178, 241, 243);
 	width: 100%;
   border: 10px black;
   padding: 50px;
@@ -51,7 +51,7 @@ div {
 
 }
 table, th, td {
-  border: 3px solid rgb(115, 231, 216);
+  border: 10px solid lightcyan;
   font-family: sans-serif;
   background-color: lightgrey;
   font color: black;
